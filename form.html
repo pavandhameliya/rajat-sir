@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="job" placeholder="Job">
+        <input type="text" id="dipartment" placeholder="Dipartment">
+        <input type="number" id="salary" placeholder="Salary">
+        <input type="email" id="email" placeholder="Email">
+        <input type="number" id="work" placeholder="Work">
+        <input type="submit">
+    </form> 
+    <table border="2px" cellspacing="2px" cellpadding="2px">
+        <thead>
+            <tr>
+               <th>your name</th>
+               <th>job</th>
+               <th>Dipartment</th>
+               <th>salary</th>
+               <th>email</th>
+               <th>work</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+
+        </tbody>
+    </table>
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit",function(e){
+    e.preventDefault()
+
+    let name=document.getElementById("name").value
+    let job=document.getElementById("job").value
+    let dipartment=document.getElementById("dipartment").value
+    let salary=document.getElementById("salary").value
+    let email=document.getElementById("email").value
+    let work=document.getElementById("work").value
+ 
+
+
+let tr=document.createElement("tr")
+let td1=document.createElement("td")
+td1.innerHTML=name
+let td2=document.createElement("td")
+td2.innerHTML=job
+let td3=document.createElement("td")
+td3.innerHTML=dipartment
+let td4=document.createElement("td")
+td4.innerHTML=salary
+let td5=document.createElement("td")
+td5.innerHTML=email
+let td6=document.createElement("td")
+td6.innerHTML=work
+
+tr.append(td1,td2,td3,td4,td5,td6)
+document.getElementById("tbody").append(tr)
+
+
+})
+
+
+  
+</script>
+<script>
+    
+</script>
+</html>

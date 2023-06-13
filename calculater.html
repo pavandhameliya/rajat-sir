@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+   <div class="color">
+        <input type="number" placeholder="A" id="number1" >
+        <input type="number" placeholder="B" id="number2" >
+        <h1 id="ans">ans</h1>
+        <button onclick="add()">add</button>
+        <button onclick="multi()">multi</button>
+        <button onclick="div()">div</button>
+        <button onclick="sub()">sub</button>
+        
+   </div>
+    <script>
+        function add() {
+            var n1 = parseInt(document.getElementById("number1").value);
+            var n2 = parseInt(document.getElementById("number2").value);
+            console.log(n1, n2);
+            sum = n1 + n2;
+            console.log(sum);
+            document.getElementById("ans").innerHTML= (sum)
+        }
+        function multi() {
+            var n1 = parseInt(document.getElementById("number1").value);
+            var n2 = parseInt(document.getElementById("number2").value);
+            multi= n1 * n2;
+            console.log(multi);
+            document.getElementById("ans").innerHTML= (multi)
+        }
+        function div() {
+            var n1 = parseInt(document.getElementById("number1").value);
+            var n2 = parseInt(document.getElementById("number2").value);
+            div= n1 / n2;
+            console.log(div);
+            document.getElementById("ans").innerHTML= (div)
+        }
+        function sub() {
+            var n1 = parseInt(document.getElementById("number1").value);
+            var n2 = parseInt(document.getElementById("number2").value);
+            sub = n1 - n2;
+            console.log(sub);
+            document.getElementById("ans").innerHTML= (sub)
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+    <h1 id="number">100</h1>
+<body>
+    <script>
+        let num=document.getElementById("number").innerHTML;
+        console.log(num);
+
+        let count=0
+       let id= setInterval(() => {
+            count++;
+            if (count==num){
+                clearInterval(id);
+            }
+            document.getElementById("number").innerHTML = count;
+
+        }, 10);
+    </script>
+</body>
+</html>

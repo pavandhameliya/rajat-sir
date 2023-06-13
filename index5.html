@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <input type=number id="num1" placeholder="Enter Num-1" />
+    <input type=number id="num2" placeholder="Enter Num-2" />
+    <button onclick=check()>Check</button>
+    <script>
+        function check() {
+            var a = document.getElementById('num1').value
+            var b = document.getElementById('num2').value
+
+            console.log(a, b);
+            if (a < b) {
+                console.log("True")
+            }
+            else if (a == b) {
+                console.log("False")
+            }
+            else {
+                console.log("False")
+            }
+        }
+    </script>
+</body>
+
+</html>

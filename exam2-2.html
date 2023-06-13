@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- <a href="exam2-3.js">home</a> -->
+
+<body>
+    <script>
+        let array=JSON.parse(localStorage.getItem('product')) || [];
+        function product() {
+        array.map((ele)=>{
+
+            let div=document.createElement("div");
+
+            let name=document.createElement("h1");
+            name.innerHTML=`name:${ele.name}`;
+            let img=document.createElement("img");
+            img.src= ele.image;
+            let pri=document.createElement("h2");
+            pri.innerHTML=`pri:${ele.pri}`;
+            let rat=document.createElement("h4");
+            rat.innerHTML=`rat:${ele.rat}`;
+            let cat=document.createElement("h3")
+            cat.innerHTML=`cat:${ele.cat}`;
+
+            div.appendChild(name,img,pri,rat,cat);
+            document.getElementById("output").append(div);
+        })
+        }
+    </script>
+</body>
+</html>

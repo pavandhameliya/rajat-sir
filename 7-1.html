@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="your name">
+        <input type="number" id="number" placeholder="your number">
+        <input type="email" id="email" placeholder="your email">
+        <input type="number" id="age" placeholder="your age">
+        <input type="text" id="designation" placeholder="your designation">
+        <select name="" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <input type="submit">
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+
+    <script>
+        document.querySelector("form").addEventListener("submit",function(e){
+            e.preventDefault()
+
+            let name= document.getElementById("name").value
+            let number= document.getElementById("number").value
+            let email= document.getElementById("email").value
+            let age= document.getElementById("age").value
+            let designation= document.getElementById("designation").value
+            let gender= document.getElementById("gender").value
+            console.log(name,number,email,age,designation,gender);
+
+            let data={
+                name:name,
+                number:number,
+                email:email,
+                age:age,
+                designation:designation,
+                gender:gender
+            }
+            console.log(data);
+
+            let h1= document.createElement("h1")
+            h1.innerHTML= `name: ${data.name}`
+            let h2= document.createElement("h1")
+            h2.innerHTML= `number: ${data.number}`
+            let h3= document.createElement("h1")
+            h3.innerHTML= `email: ${data.email}`
+            let h4= document.createElement("h1")
+            h4.innerHTML= `age: ${data.age}`
+            let h5= document.createElement("h1")
+            h5.innerHTML= `designation: ${data.designation}`
+            let h6= document.createElement("h1")
+            h6.innerHTML= `gender: ${data.gender}`
+
+            document.getElementById("result").append(h1,h2,h3,h4,h5,h6)
+        })
+    </script>
+
+</html>
